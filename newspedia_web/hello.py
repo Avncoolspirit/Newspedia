@@ -33,7 +33,7 @@ def hello():
 def members():
     return "Members"
 
-@app.route("/api/v1.0/get_recos/<string:videoid>/<int:time>/<int:time>")
+@app.route("/api/v1.0/get_recos/<string:videoid>/<int:time>/")
 def getMember(videoid,time):
 	string_test =""
 	if int(videoid) == 1 :
