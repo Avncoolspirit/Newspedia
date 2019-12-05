@@ -92,15 +92,14 @@ def updateTime(videoid,time):
     
 
 
-@app.route("/api/v1.0/get_recos/<int:videoid>/<int:time>/")
+@app.route("/api/v1.0/get_recos/<string:videoid>/<int:time>/")
 def getMember(videoid,time):
     string_test =""
     state = query_db('select * from state')
-    if videoid == 1 :
-        subs_to_extract = extract_subs('sub1.srt')
-        snap = subs_between_time(subs_to_extract,int(state[0][2])-2,int(state[0][2]))
-        string_test = ' '.join(snap)
-    return jsonify(ek(string_test))
+    subs_to_extract = extract_subs(videoid+'.srt')
+    snap = subs_between_time(subs_to_extract,int(state[0][2])-2,int(state[0][2]))
+    string_test = ' '.join(snap)
+    return jsonify({'videoid':videoid,'time_elased':state[0][2],'keywords':ek(string_test)})
 
 @app.route('/todo/api/v1.0/tasks', methods=['GET'])
 def get_tasks():
