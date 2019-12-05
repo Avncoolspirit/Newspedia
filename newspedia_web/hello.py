@@ -89,7 +89,13 @@ def members():
 def updateTime(videoid,time):
     query_db('UPDATE state SET video_id = ?, time = ? where id  = 1' ,(videoid,time))
     return "Success!"
-    
+
+@app.route("/api/v1.0/get_video_id/")
+def getVideo():
+    state = query_db('select * from state')
+    return jsonify({'current_videoid':state[0][1]})
+ 
+
 
 
 @app.route("/api/v1.0/get_recos/<string:videoid>/<int:time>/")
