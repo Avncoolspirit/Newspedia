@@ -1,0 +1,48 @@
+/* Show it is fixed to the top */
+body {
+	min-height: 75rem;
+	padding-top: 4.5rem;
+	background-color: #000000;
+}
+
+.navbar, .card-header {
+	background-color: #242424;
+}
+
+.card-body {
+	background-color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+ color: #FFFFFF;
+}
+
+.logo {
+	height: 30px;
+}
+
+.block {
+	margin-bottom: 1.5rem;
+}
+
+.header {
+	width: 100%;
+	background-color: #E7542E;
+	font-size: 1rem;
+	vertical-align: middle;
+	padding: 0.8rem;
+}
+
+.card {
+	margin-bottom: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+.most-important-keyword {
+	font-size: 1rem;
+	background-color: #E7542E;
+}
+
+.btn-play, .progress-bar {
+	background-color: #E7542E;
+}
